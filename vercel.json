@@ -1,21 +1,3 @@
 {
-  "version": 2,
-  "name": "my-app",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
-    }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "env": {
-    "REACT_APP_API_URL": "https://api.example.com"
-  },
-  "github": {
-    "enabled": true,
-    "silent": false
-  }
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
